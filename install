@@ -1,3 +1,12 @@
 #!/bin/bash
 
-sudo apt-get install rxvt-unicode
+TERMINAL_RECIPE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+sudo apt-get install rxvt-unicode-256color
+
+cp /home/linuxbrew/.linuxbrew/Cellar/ncurses/6.0_4/share/terminfo/r/rxvt-256color ~/.terminfo/r/rxvt-unicode-256color
+
+if [ -f $HOME/.Xresources ]; then
+    cat $TERMINAL_RECIPE_DIR/files/Xresources >> $HOME/.Xresources
+    xrdb $HOME/.Xresources
+fi

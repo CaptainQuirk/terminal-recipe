@@ -1,0 +1,31 @@
+# URxvt
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.loginShell:           true
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+URxvt*shading: 15
+
+URxvt*saveLines: 12000
+
+URxvt*foreground: #ffffff
+URxvt*background: #000000
+
+URxvt*font: xft:SauceCodePro Nerd Font Mono:style=Medium:pixelsize=14
+URxvt*boldFont: xft:SauceCodePro Nerd Font Mono:style=Medium:bold:pixelsize=14
+URxvt*letterSpace: -1
+
+URxvt*scrollBar: true
+
+URxvt*scrollBar_right: false
+
+URxvt*scrollstyle: plain
+
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg4
+
+# /end URxvt
