@@ -1,0 +1,16 @@
+apt "Install urxvt"; do
+    package "rxvt-unicode-256color"
+done
+
+file "Copying terminfo definitions"; do
+    source "/home/linuxbrew/.linuxbrew/Cellar/ncurses/6.0_4/share/terminfo/r/rxvt-256color"
+    path "~/.terminfo/r/rxvt-unicode-256color"
+done
+
+code "Appending Xresource styles if missing"; do
+    code "if ! grep '# URxvt' ~/.Xresources > /dev/null 2>&1; then cat "$RECIPE_DIR/files/Xresources" >> "$HOME/.Xresources"; fi"
+done
+
+code "Refresh X database"; do
+    code "xrdb $HOME/.Xresources"
+done
