@@ -1,4 +1,4 @@
 {
-  "name": "hillaryklingon/terminal-recipe",
-  "description": "Install rxvt-unicode"
+  "name": "captainquirk/terminal-recipe",
+  "description": "Install rxvt-unicode and set basic X11 styles"
 }
