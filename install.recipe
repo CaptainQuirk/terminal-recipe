@@ -3,7 +3,7 @@ apt "Install urxvt"; do
 done
 
 file "Copying terminfo definitions"; do
-    source "/home/linuxbrew/.linuxbrew/Cellar/ncurses/6.0_4/share/terminfo/r/rxvt-256color"
+    source "/home/linuxbrew/.linuxbrew/Cellar/ncurses/6.1/share/terminfo/r/rxvt-256color"
     path "~/.terminfo/r/rxvt-unicode-256color"
 done
 
